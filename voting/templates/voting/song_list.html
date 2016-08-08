@@ -1,10 +1,26 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Dank Songs</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/voting.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<h1>Dank Songs Voting</h1>
+<div class="page-header">
+    <h1>Dank Songs Voting</h1>
+</div>
+<div class="songs">
+    {% for song in songs %}
+        <div>
+            <p><h2>{{ song.title }}</h2></p>
+            <p>{{ song.artist }}</p>
+        <br/>
+        </div>
+    {% endfor %}
+</div>
 </body>
 </html>
