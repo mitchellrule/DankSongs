@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dank Songs</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/voting.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="page-header">
+    <h1>Dank Songs Voting</h1>
+</div>
+<div class="songs">
+    {% block content %}
+    {% endblock %}
+</div>
+<div>
+    {{ user }}
+    {% if user.is_anonymous %}
+    <a href="{% url 'django.contrib.auth.views.login' %}">login</a>
+    {% else %}
+    <a href="{% url 'django.contrib.auth.views.logout' %}">logout</a>
+    {% endif %}
+</div>
+</body>
+</html>
