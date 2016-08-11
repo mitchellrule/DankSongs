@@ -1,3 +1,11 @@
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: #F3B422;
+}
+
 .page-header {
     background-color: #F33E22;
     margin-top: 0;
@@ -44,4 +52,21 @@ h1, h2, h3, h4 {
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+
+.login_logout {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-family: "Fjalla One", sans-serif;
+    size: 30pt;
+}
+
+.add_song {
+    position: fixed;
+    top: 45px;
+    right: 60px;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 18pt;
+    color: #F3B422;
 }

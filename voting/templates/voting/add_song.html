@@ -1,0 +1,14 @@
+{% extends 'voting/base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h1>New Song</h1>
+        <form method="POST" class="song-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% elif user.is_anonymous %}
+    <p>Please Login</p>
+
+{% endif %}
+{% endblock %}

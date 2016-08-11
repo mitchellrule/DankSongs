@@ -11,18 +11,21 @@
 </head>
 <body>
 <div class="page-header">
-    <h1>Dank Songs Voting</h1>
+    <a href="{% url 'voting.views.song_list' %}"><h1>Dank Songs Voting</h1></a>
+</div>
+<div class="add_song">
+    <a style="" href="{% url 'voting.views.add_song' %}">Add a New Song</a>
 </div>
 <div class="songs">
     {% block content %}
     {% endblock %}
 </div>
-<div>
+<div class="login_logout">
     {{ user }}
     {% if user.is_anonymous %}
-    <a href="{% url 'django.contrib.auth.views.login' %}">login</a>
+    <a href="{% url 'django.contrib.auth.views.login' %}">Login</a>
     {% else %}
-    <a href="{% url 'django.contrib.auth.views.logout' %}">logout</a>
+    <a href="{% url 'django.contrib.auth.views.logout' %}">Logout</a>
     {% endif %}
 </div>
 </body>
