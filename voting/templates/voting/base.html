@@ -21,10 +21,11 @@
     {% endblock %}
 </div>
 <div class="login_logout">
-    {{ user }}
     {% if user.is_anonymous %}
+    Not logged in.
     <a href="{% url 'django.contrib.auth.views.login' %}">Login</a>
     {% else %}
+    {{ user }}
     <a href="{% url 'django.contrib.auth.views.logout' %}">Logout</a>
     {% endif %}
 </div>
