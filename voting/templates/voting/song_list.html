@@ -3,8 +3,9 @@
 {% block content %}
     {% for song in songs %}
         <div>
-            <p><h2>{{ song.title }}</h2></p>
+            <p><h2><a target="_blank" href="{{ song.link }}">{{ song.title }}</a></h2></p>
             <p>{{ song.artist }}</p>
+        <br/>
         <br/>
         </div>
     {% endfor %}
