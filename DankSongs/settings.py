@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'voting',
-    'vote',
+    'secretballot',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -50,6 +50,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'secretballot.middleware.SecretBallotIpMiddleware',
+    'secretballot.middleware.SecretBallotIpMiddleware',
 ]
 
 ROOT_URLCONF = 'DankSongs.urls'
